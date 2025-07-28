@@ -10,6 +10,15 @@ import * as Sentry from "@sentry/react-router";
 import type { Route } from "./+types/root";
 import "./app.css";
 
+Sentry.init({
+  dsn: "https://4128c220d3e8878b97fbd3366d4c0770@o4509689644318720.ingest.us.sentry.io/4509689653755904",
+  sendDefaultPii: true,
+  _experiments: { enableLogs: true },
+  tracesSampleRate: 1.0,
+  profilesSampleRate: 1.0,
+});
+
+
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
